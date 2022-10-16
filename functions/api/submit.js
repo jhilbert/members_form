@@ -23,7 +23,7 @@ export async function onRequestPost({ request, env }) {
 			
 			  for (let i = 0; i < length; i++) {
 				const name = keys[i].name;
-				const value = await MEMBERS.get(name);
+				const value = await env.MEMBERS.get(name);
 				keys[i].value = value;
 			  }
 			  return new Response(JSON.stringify(keys));
