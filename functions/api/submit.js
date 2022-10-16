@@ -1,7 +1,7 @@
 /**
  * POST /api/submit
  */
-export async function onRequestPost({ request }) {
+export async function onRequestPost({ request, env }) {
 	try {
 		let input = await request.formData();
 
@@ -14,7 +14,7 @@ export async function onRequestPost({ request }) {
 		
 	//		  await MEMBERS.put(email, name);
 
-				const value = await request.MEMBERS.get("josef.hilbert@icloud.com");
+				const value = await env.MEMBERS.get("josef.hilbert@icloud.com");
 				if (value === null) {
 				  return new Response("Value not found", { status: 404 });
 				}
