@@ -14,7 +14,7 @@ export async function onRequestPost({ request }) {
 		
 	//		  await MEMBERS.put(email, name);
 
-				const value = await MEMBERS.get("josef.hilbert@icloud.com");
+				const value = await request.MEMBERS.get("josef.hilbert@icloud.com");
 				if (value === null) {
 				  return new Response("Value not found", { status: 404 });
 				}
