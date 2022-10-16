@@ -5,14 +5,14 @@ export async function onRequestPost({ request }) {
 	try {
 		let input = await request.formData();
 
-		const {
-			name,
-			email,
-			referers,
-			movies
-			  } = Object.fromEntries(input)
+	//	const {
+	//		name,
+	//		email,
+	//		referers,
+	//		movies
+	//		  } = Object.fromEntries(input)
 		
-			  await MEMBERS.put(email, name);
+	//		  await MEMBERS.put(email, name);
 
 				const value = await MEMBERS.get("josef.hilbert@icloud.com");
 				if (value === null) {
