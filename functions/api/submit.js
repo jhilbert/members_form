@@ -12,7 +12,7 @@ export async function onRequestPost({ request, env }) {
 			movies
 			  } = Object.fromEntries(input)
 		
-			  await MEMBERS.put(email, name);
+			  await env.MEMBERS.put(email, name);
 
 				const value = await env.MEMBERS.get("josef.hilbert@icloud.com");
 				if (value === null) {
